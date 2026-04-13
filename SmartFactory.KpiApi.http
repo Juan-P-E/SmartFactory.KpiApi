@@ -1,0 +1,6 @@
+@SmartFactory.KpiApi_HostAddress = http://localhost:5063
+
+GET {{SmartFactory.KpiApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
