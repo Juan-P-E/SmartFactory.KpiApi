@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SmartFactory.KpiApi.DTOs;
 using SmartFactory.KpiApi.Services;
 
 namespace SmartFactory.KpiApi.Controllers
@@ -32,6 +33,30 @@ namespace SmartFactory.KpiApi.Controllers
         {
             var downtime = _kpiService.ObtenerDowntime();
             return Ok(downtime);
+        }
+        [HttpGet("oee")]
+        public IActionResult ObtenerOee()
+        {
+            var oee = _kpiService.ObtenerOee();
+            return Ok(oee);
+        }
+        [HttpGet("oee-por-turno")]
+        public IActionResult ObtenerOeePorTurno()
+        {
+            var resultado = _kpiService.ObtenerOeePorTurno();
+            return Ok(resultado);
+        }
+        [HttpGet("scrap")]
+        public ActionResult<ScrapDto> ObtenerScrap()
+        {
+            var resultado = _kpiService.ObtenerScrapPromedio();
+            return Ok(resultado);
+        }
+        [HttpGet("resumen")]
+        public IActionResult ObtenerResumen()
+        {
+            var resultado = _kpiService.ObtenerResumen();
+            return Ok(resultado);
         }
     }
 }

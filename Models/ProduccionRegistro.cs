@@ -10,5 +10,6 @@
         public int ProduccionObjetivo { get; set; }
         public int DowntimeMinutos { get; set; }
         public decimal ScrapPorcentaje { get; set; }
+        public double Scrap { get; set; }
     }
 }
